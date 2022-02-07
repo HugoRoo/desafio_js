@@ -13,6 +13,14 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="assets/favicon.ico" type="image">
   <title>Dev Community 👩‍💻👨‍💻</title>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
+  <script src="./js/functions.js"></script>
+  <script src="./js/constants.js"></script>
+  <script src="./js/styles.js"></script>
+  <script src="./js/credenciales.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 
@@ -141,9 +149,9 @@
     <section class="container">
       <div class="row">
         <!--Contenedor de las 3 secciones-->
-        <aside class="col-12 col-md-3 flex-shrink-1 d-none d-md-block">
+        <aside class="col-md-4 col-lg-3 flex-shrink-2 d-none d-md-block">
 
-          <div class="card" style="width: 18rem;">
+          <div class="card" style="max-width: 18rem;">
             <div class="card-body">
               <h5 class="card-title"><a href="index.html">Dev Community</a> is a community of 757,079 amazing
                 developers</h5>
@@ -266,7 +274,7 @@
           </div>
 
 
-          <div class="card mt-3" style="width: 18rem;">
+          <div class="card mt-3" >
             <img
               src="https://res.cloudinary.com/practicaldev/image/fetch/s--pVCMYZWJ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://scontent-lga3-1.cdninstagram.com/vp/7c898e2c9e9fa71f72dd5d422d444549/5DFE1BFA/t51.2885-15/fr/e15/s1080x1080/57390242_386431405416711_440644832181536446_n.jpg%3F_nc_ht%3Dscontent-lga3-1.cdninstagram.com"
               width="" height="" loading="lazy">
@@ -275,7 +283,7 @@
             </div>
           </div>
 
-          <div class="card mt-3" style="width: 18rem;">
+          <div class="card mt-3">
             <div class="card-body">
 
               <p class="card-text">
@@ -293,573 +301,16 @@
         </aside>
 
         <!--Post Monica-->
-        <section class="col-12 col-md-6">
-          <nav>
-            <div class="container mb-3 ps-1">
-              <a href=" #" class="text-decoration-none text-black fw-bolder pe-3 ">Relevant</a>
-              <a href="#" class="text-decoration-none text-secondary pe-3">Latest</a>
-              <a href="#" class="text-decoration-none text-secondary">Top</a>
-            </div>
-          </nav>
-          <section class="card card-post p-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <!--link tittle <a href="pages/post.html" class="text-decoration-none">"·$$%"--> 
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <a href="pages/post.html" class="text-decoration-none">
-                  <span>14 comments <a href="pages/post.html" class="text-decoration-none"></a></span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
-          <section class="card card-post p-3 mt-3">
-            <div class="devcard-header d-flex align-items-start justify-content-between">
-              <div class="card-user d-flex ps-3 align-items-center">
-                <img src="assets/user-dev.webp" alt="Usuario Imagen" width="32" height="32" class="me-2 rounded-circle">
-                <div class="user-name d-flex flex-column">
-                  <p class="mb-0">Ben Halpern <span>for</span> The DEV Team</p>
-                  <p class="user-date text-secondary mb-0">Dec3</p>
-                </div>
-              </div>
-              <div class="devcard-pin d-flex align-items-center pe-3">
-                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" aria-hidden="true"
-                  class="mr-1 align-text-bottom color-accent-brand me-2" fill="#3b49df">
-                  <path
-                    d="M22.314 10.172l-1.415 1.414-.707-.707-4.242 4.242-.707 3.536-1.415 1.414-4.242-4.243-4.95 4.95-1.414-1.414 4.95-4.95-4.243-4.242 1.414-1.415L8.88 8.05l4.242-4.242-.707-.707 1.414-1.415z">
-                  </path>
-                </svg>
-                <span class="text-secondary">Pinned</span>
-              </div>
-            </div>
-            <div class="devcard-main p-3">
-              <a href="pages/post.html" class="text-decoration-none">
-                <h2 class="text-black link-purple fw-bold">Last Chance to Join the 2021 GitHub Actions Hackathon on DEV!
-                </h2>
-              </a>
-              <div class="devcard-tags mb-2">
-                <span>#meta</span>
-                <span>#actionshackathon21</span>
-              </div>
-            </div>
-            <div class="devcard-footer bg-white d-flex justify-content-between align-items-center ps-3">
-              <div class="d-flex">
-                <div class="devcard-likes me-3">
-                  <img src="assets/svg/icon-heart.svg" alt="Likes icon">
-                  <span>87 reactions</span>
-                </div>
-                <div class="devcard-comments">
-                  <img src="assets/svg/iccon-comment.svg" alt="Comment icon">
-                  <span>14 comments</span>
-                </div>
-              </div>
-              <div class="card-read d-flex align-items-center pe-3">
-                <span class="me-2 text-secondary">2 min read</span>
-                <button class="btn btn-secondary text-light">Save</button>
-              </div>
-            </div>
-          </section>
+        <section class="col-md-8 col-lg-5" id="container-center">
+          
+
+          
         </section>
 
 
         <!--Aside Right Vryhan... dont touch plisss-->
 
-        <section class="d-none d-md-block col-3">
+        <section class="d-none d-lg-block col-lg-1">
           <div class="card" style="width: 18rem;">
             <div class="card-body" style="font-weight: bold">
               <p>DEV is built in the open via Forem... Want to take part in the discussion?</p>
@@ -994,13 +445,11 @@
 
 
       </div>
-      </sectio>
+    </section>
 
   </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
+  <script src="./js/index.js"></script>
+ 
 </body>
 
 </html>

@@ -224,4 +224,22 @@ footer {
     left: -48px;
   }
 }
+
+.title-class {
+  cursor: pointer;
+}
+
+.title-class:hover {
+  color: #3b49df !important;
+}
+
+.devcard-likes {
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.devcard-likes:hover {
+  background-color: #e6e6e6;
+}
 /*# sourceMappingURL=styles.css.map */
