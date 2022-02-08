@@ -1,6 +1,8 @@
 
-function createCard(photo, userName, date, title, hashtag, reaction, comments, counter){
+function createCard(photo, userName, date, title, hashtag, reaction, counter){
     let card = new Card();
+    let comment = new Comment();
+    
 
     card.photo = photo;
     card.userName = userName;
@@ -8,6 +10,7 @@ function createCard(photo, userName, date, title, hashtag, reaction, comments, c
     card.title = title;
     card.hashtag = hashtag;
     card.reaction = reaction;
+    
     $('#container-center').append(
         $('<section/>').attr('class', 'card card-post p-3 mt-3').attr('id',`card-${counter}`).append(
             $('<div/>').attr('class', 'card-user d-flex ps-3 align-items-center').append(
@@ -51,11 +54,11 @@ function createCard(photo, userName, date, title, hashtag, reaction, comments, c
                                 .attr('class','ms-2')
                             )
                         ).append(
-                            $('<button/>').attr('class', 'devcard-likes devcard-comments').append(
+                            $('<button/>').attr('class', 'devcard-likes devcard-comments').attr('id', `btn-c${counter}`).append(
                                 $('<img/>').attr('src', 'assets/svg/iccon-comment.svg')
                                 .attr('alt', 'Comment icon').attr('id', `btn-c${counter}`)
                             ).append(
-                                $('<span/>').text(`${reaction} comments`).attr('id', `comments-${counter}`)
+                                $('<span/>').text(`${card.comments.length} comments`).attr('id', `comments-${counter}`)
                                 .attr('class','ms-2')
                             )
                         )
@@ -83,4 +86,27 @@ function createCard(photo, userName, date, title, hashtag, reaction, comments, c
         
         
     });
+    $(`#btn-c${counter}`).click((e)=>{
+        let c = e.target.id.replace('btn-c', '');
+        $(`#card-${c}`).append(
+            $('<section/>').attr('class', 'card card-post p-3 mt-3').attr('id',`c-${c}`).append(
+                $('<form/>').append(
+
+                    $('<label/>').text('User Name:').append(
+                        $('<input>').attr('type','name').attr('class','ms-4').attr('id','user')
+                        )
+                ).append(
+                    $('<label/>').text('Commet:').attr('class', 'mt-4 d-flex flex-direction-column').append(
+                        $('<textarea/>').attr('cols', '22').attr('row','10').attr('id','text').attr('class', 'ms-5')
+                    )
+                ).append(
+                    $('<input/>').attr('type','submit').attr('value','Enviar').attr('id',`btn-e${c}`)
+                )
+            )
+        )
+    })
+}
+
+function comment(){
+
 }

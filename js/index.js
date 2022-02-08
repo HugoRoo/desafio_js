@@ -1,8 +1,8 @@
 const d = document;
 
 let reaction = 0,
-counter = 0,
-comments = "";
+counter = 0;
+
 let hashtag = [];
 $(d).ready(function () {
     $('#container-center').append(
@@ -58,7 +58,7 @@ $(d).ready(function () {
                         hashtag.push(`#${el}`)
                     });
                    
-            createCard(photo, userName, dateToday, title, hashtag, reaction,comments, counter)
+            createCard(photo, userName, dateToday, title, hashtag, reaction, counter)
                     
                 }
             });        
@@ -67,7 +67,7 @@ $(d).ready(function () {
 }
 // generateCard(0);
 
-for (let i = 0, j = counter; i < 5 && j < 5; i++, j++) {
+for (let i = 0, j = counter; i < 100 && j < 10; i++, j++) {
     generateCard(i,j);
     
 }
