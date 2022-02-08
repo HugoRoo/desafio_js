@@ -230,3 +230,19 @@ footer {
     }
   }
 }
+
+.title-class{
+  cursor: pointer;
+  &:hover{
+    color: #3b49df !important;
+  }
+}
+
+.devcard-likes{
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  &:hover{
+    background-color: #e6e6e6;
+  }
+}
