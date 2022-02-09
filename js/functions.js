@@ -1,17 +1,160 @@
-
-function createCard(photo, userName, date, title, hashtag, reaction, counter){
+let am = [];
+let ay = [];
+while (am.length > 0) {
+    am.pop()
+}
+while (ay.length > 0) {
+    ay.pop()
+}
+    let arr = [];
+function dataArray(photo, userName, date, title, hashtag, reaction, counter){
+    let a = 0;
     let card = new Card();
     let comment = new Comment();
-    
-
     card.photo = photo;
     card.userName = userName;
     card.date = date;
     card.title = title;
     card.hashtag = hashtag;
     card.reaction = reaction;
+    card.comments = []
+    arr.push(card);
+
     
-    $('#container-center').append(
+   createCard(card, counter);
+  
+    
+    $(`#btn-r${counter}`).click(function (e) { 
+        
+        let c = e.target.id.replace('btn-r', '');
+        let d = $(`#reaction-${c}`).text();
+        reaction = parseInt(d.replace(' reactions', ''))
+        
+        reaction++
+        $(`#reaction-${c}`).text(`${reaction} reactions`)
+        
+        
+    });
+    $(`#btn-c${counter}`).click((e)=>{
+        let c = e.target.id.replace('btn-c', '');
+        if(a === 0){
+            a = 1;
+            
+        $(`#card-${c}`).append(
+            $('<section/>').attr('id', `conteiner-c${c}`).append(
+            $('<section/>').attr('class', 'card card-post p-3 mt-3').attr('id',`c-${c}`).append(
+                $('<form/>').append(
+
+                    $('<label/>').text('User Name:').append(
+                        $('<input>').attr('type','name').attr('class','ms-4').attr('id','user').attr('autocomplete', 'off')
+                        )
+                ).append(
+                    $('<label/>').text('Commet:').attr('class', 'mt-4 d-flex flex-direction-column').append(
+                        $('<textarea/>').attr('cols', '22').attr('row','20').attr('id','text').attr('class', 'ms-5')
+                    )
+                ).append(
+                    $('<input/>').attr('type','submit').attr('value','Enviar').attr('id',`btn-e${c}`)
+                )
+            )
+        )
+        )
+    }
+    $(`#c-${c}`).append(function () {
+    
+        if (card.comments.length > 0) {
+            console.log('ok');
+            let com = card.comments;
+            let ind = card.comments.length;
+            
+            for (let i = 0; i < ind; i++) {
+                $(`#conteiner-c${c}`).append(
+                    $('<div/>').attr('class', 'card card-post p-3 mt-3').append(
+    
+                        $('<h3/>').text(com[i].userName)
+                        ).append(
+                            $('<p/>').text(com[i].text)
+                        )
+                ) 
+                
+            }
+            
+        }
+    })
+    $(`#btn-e${c}`).click((e)=>{
+        let user = d.getElementById('user').value;
+        let com = d.getElementById('text').value;
+        e.preventDefault();
+        if (user === '' && com === '') {
+            alert('Ingresa un valor')
+        } else{
+        
+        comment.userName = user;
+        comment.text = com;
+        card.comments.push(comment)
+        $(`#comments-${c}`).text(`${card.comments.length} comments`)
+        
+        $(`#conteiner-c${c}`).remove();
+        
+        a = 0;
+        }
+        
+    })
+    })
+    
+    $('#month').change((e)=>{
+        
+        let cha = d.getElementById('month').value
+        let cs = cha.toString()
+        
+        
+        if(arr[counter].date[1] === cs){
+            console.log(arr[counter].date[1] === cs);
+            console.log(counter);
+            am.push(arr[counter])
+
+        }
+        
+        // let re = arr.filter(res => arr[counter].date[1] == cha);
+        // console.log(re);
+        if(am.length > 0){
+            $(`#container-card`).empty()
+            
+            am.forEach(element => {
+                
+                createCard(element, am.length);
+            });
+        }
+        
+    })
+    $('#year').change((e)=>{
+        
+        let cha = d.getElementById('year').value;
+        let cs = cha.toString()
+        
+        
+        if(arr[counter].date[3] === cs){
+            ay.push(arr[counter])
+
+        }
+        // console.log(re);
+        // let re = arr.filter(res => arr[counter].date[1] == cha);
+        // console.log(re);
+        if(ay.length > 0){
+            $(`#container-card`).empty()
+            ay.forEach(element => {
+                
+                createCard(element, ay.length);
+            });
+        }
+    })
+    
+}
+
+
+function createCard(card, counter) {
+
+    $('#container-card').append(
+        
         $('<section/>').attr('class', 'card card-post p-3 mt-3').attr('id',`card-${counter}`).append(
             $('<div/>').attr('class', 'card-user d-flex ps-3 align-items-center').append(
                 $('<img/>').attr('src', card.photo)
@@ -24,7 +167,7 @@ function createCard(photo, userName, date, title, hashtag, reaction, counter){
                     $('<p/>').attr('class','mb-0')
                     .text(card.userName)
                 ).append(
-                    $('<p/>').attr('class', 'user-date text-secondary mb-0').text(card.date)
+                    $('<p/>').attr('class', 'user-date text-secondary mb-0').text(`${card.date[1]} ${card.date[2]} ${card.date[3]}`)
                 )
             )
         ).append(
@@ -72,41 +215,7 @@ function createCard(photo, userName, date, title, hashtag, reaction, counter){
                         )
                     )
         )
+     
     )
-  
-    
-    $(`#btn-r${counter}`).click(function (e) { 
-        
-        let c = e.target.id.replace('btn-r', '');
-        let d = $(`#reaction-${c}`).text();
-        reaction = parseInt(d.replace(' reactions', ''))
-        
-        reaction++
-        $(`#reaction-${c}`).text(`${reaction} reactions`)
-        
-        
-    });
-    $(`#btn-c${counter}`).click((e)=>{
-        let c = e.target.id.replace('btn-c', '');
-        $(`#card-${c}`).append(
-            $('<section/>').attr('class', 'card card-post p-3 mt-3').attr('id',`c-${c}`).append(
-                $('<form/>').append(
-
-                    $('<label/>').text('User Name:').append(
-                        $('<input>').attr('type','name').attr('class','ms-4').attr('id','user')
-                        )
-                ).append(
-                    $('<label/>').text('Commet:').attr('class', 'mt-4 d-flex flex-direction-column').append(
-                        $('<textarea/>').attr('cols', '22').attr('row','10').attr('id','text').attr('class', 'ms-5')
-                    )
-                ).append(
-                    $('<input/>').attr('type','submit').attr('value','Enviar').attr('id',`btn-e${c}`)
-                )
-            )
-        )
-    })
 }
 
-function comment(){
-
-}

@@ -7,23 +7,81 @@ let hashtag = [];
 $(d).ready(function () {
     $('#container-center').append(
         $('<nav/>').append(
-            $('<div/>').attr('class', 'container mb-3 ps-1')).append(
-                $('<a/>').attr('class','text-decoration-none text-black fw-bolder pe-3').attr('id','relevant').text('Relevant')
+            $('<div/>').attr('class', 'container mb-3 ps-1'))
+            // .append(
+            //     $('<a/>').attr('class','text-decoration-none text-black fw-bolder pe-3').attr('id','week').css({
+            //         cursor: 'pointer'
+            //     }).text('Week')
+            // )
+            .append(
+                $('<select/>').attr('class', 'text-decoration-none text-secondary pe-3').attr('id','month').append(
+                    $('<option/>').attr('value', 'Month').text('Month')
+                ).append(
+                    $('<option/>').attr('value', 'Jan').text('January')
+                ).append(
+                    $('<option/>').attr('value', 'Feb').text('February')
+                ).append(
+                    $('<option/>').attr('value', 'Mar').text('March')
+                ).append(
+                    $('<option/>').attr('value', 'Apr').text('April')
+                ).append(
+                    $('<option/>').attr('value', 'May').text('May')
+                ).append(
+                    $('<option/>').attr('value', 'Jun').text('June')
+                ).append(
+                    $('<option/>').attr('value', 'Jul').text('July')
+                ).append(
+                    $('<option/>').attr('value', 'Aug').text('August')
+                ).append(
+                    $('<option/>').attr('value', 'Sep').text('September')
+                ).append(
+                    $('<option/>').attr('value', 'Oct').text('October')
+                ).append(
+                    $('<option/>').attr('value', 'Nov').text('November')
+                ).append(
+                    $('<option/>').attr('value', 'Dec').text('December')
+                )
             ).append(
-                $('<a/>').attr('class', 'text-decoration-none text-secondary pe-3').attr('id','latest').text('Latest')
-            ).append(
-                $('<a/>').attr('class', 'text-decoration-none text-secondary pe-3').attr('id','top').text('Top')
-                ))
+                $('<select/>').attr('class', 'text-decoration-none text-secondary pe-3').attr('id','year').append(
+                    $('<option/>').attr('value', 'Year').text('Year')
+                ).append(
+                    $('<option/>').attr('value', '2022').text('2022')
+                ).append(
+                    $('<option/>').attr('value', '2021').text('2021')
+                ).append(
+                    $('<option/>').attr('value', '2020').text('2020')
+                ).append(
+                    $('<option/>').attr('value', '2019').text('2019')
+                ).append(
+                    $('<option/>').attr('value', '2018').text('2018')
+                ).append(
+                    $('<option/>').attr('value', '2017').text('2017')
+                ).append(
+                    $('<option/>').attr('value', '2016').text('2016')
+                ).append(
+                    $('<option/>').attr('value', '2015').text('2015')
+                ).append(
+                    $('<option/>').attr('value', '2014').text('2014')
+                ).append(
+                    $('<option/>').attr('value', '2013').text('2013')
+                ).append(
+                    $('<option/>').attr('value', '2012').text('2012')
+                ).append(
+                    $('<option/>').attr('value', '2011').text('2011')
+                )
+            )
+                ).append(
+                    $('<section/>').attr('id', `container-card`))
     
     navStyle();
+
+
     
-    
-        
         
     
 
     
-    function generateCard(post, counter){
+    function generateCard(counter){
         
     //     $.ajax({
     //         url: "https://api.pexels.com/v1/popular",
@@ -49,16 +107,16 @@ $(d).ready(function () {
                         hashtag.pop();
                     }
                     
-                    let photo = art[post].user.profile_image_90;
-                    let title = art[post].title;
-                    let arrayTag = art[post].tag_list;
+                    let photo = art[counter].user.profile_image_90;
+                    let title = art[counter].title;
+                    let arrayTag = art[counter].tag_list;
                     
                     
                     arrayTag.forEach(el => {
                         hashtag.push(`#${el}`)
                     });
                    
-            createCard(photo, userName, dateToday, title, hashtag, reaction, counter)
+            dataArray(photo, userName, obtenerFecha(), title, hashtag, reaction, counter)
                     
                 }
             });        
@@ -67,9 +125,8 @@ $(d).ready(function () {
 }
 // generateCard(0);
 
-for (let i = 0, j = counter; i < 100 && j < 10; i++, j++) {
-    generateCard(i,j);
-    
+for (let i = 0 ; i < 20; i++) {
+    generateCard(i);
 }
 });
 
