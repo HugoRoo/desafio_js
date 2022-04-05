@@ -1,0 +1,6 @@
+applications:
+- name: desafiojs
+  memory: 32M
+  stack: cflinuxfs3
+  buildpack: staticfile_buildpack
+  random-route: true
